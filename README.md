@@ -1,6 +1,6 @@
 # Employee Benefits Management
 
-This is a simple webapplication tends to disaply the employees and dependent list and provide ability to add/update employee/dependent and calculate the health care benifits.
+This is a simple webapplication tends to display the employees and dependent list and provide ability to add/update employee or dependent and calculate the health care benifits.
 
 This project is was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
