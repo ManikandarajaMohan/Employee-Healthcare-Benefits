@@ -31,6 +31,7 @@ function DependentForm({ formik }) {
                             <div key={index}>
                                 <Stack spacing={2} direction="row" sx={{ pb: 2 }}>
                                     <TextField
+                                        required
                                         sx={{ width: '65%' }}
                                         id={`dependents[${index}].name`}
                                         label={`Dependent Name`}
@@ -38,6 +39,7 @@ function DependentForm({ formik }) {
                                         value={formik.values.dependents[index].name}
                                     />
                                     <TextField
+                                        required
                                         sx={{ width: '25%' }}
                                         id={`dependents[${index}].relation`}
                                         name={`dependents[${index}].relation`}

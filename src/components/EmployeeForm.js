@@ -8,6 +8,7 @@ import Typography from '@mui/material/Typography';
 import DependentForm from './DependentForm';
 
 function EmployeeForm({ employee, onSubmit, onCancel }) {
+
   const formik = useFormik({
     initialValues: {
       name: employee?.name || '',
@@ -16,9 +17,8 @@ function EmployeeForm({ employee, onSubmit, onCancel }) {
     },
     onSubmit: values => {
       onSubmit(values);
-    },
+    }
   });
-
 
   return (
     <Box sx={{ p: 2, width: 600 }}>
@@ -29,11 +29,13 @@ function EmployeeForm({ employee, onSubmit, onCancel }) {
         <form onSubmit={formik.handleSubmit}>
           <Stack spacing={2} direction="column">
             <TextField
+              required
               id="name"
               label="Employee Name"
               onChange={formik.handleChange}
               value={formik.values.name}
             />
+
             <DependentForm formik={formik} />
             <Stack spacing={2} direction="row" sx={{ pb: 2 }}>
               <Button color="primary" variant="outlined" fullWidth onClick={() => onCancel()}>

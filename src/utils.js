@@ -11,13 +11,13 @@ export const healthCareCostPerPaycheck = (employee) => {
     let totalCost = employeeCost;
 
     // calculating Discount
-    if (employee.name.startsWith('A')) {
+    if (employee.name?.toLowerCase().startsWith('a')) {
         totalCost = totalCost * (1 - (discount / 100));
     }
 
     employee.dependents.forEach(dependent => {
         let cost = dependentCost;
-        if (dependent.name.startsWith('A')) {
+        if (dependent.name?.toLowerCase().startsWith('a')) {
             cost = cost * (1 - (discount / 100));
         }
         totalCost += cost;
