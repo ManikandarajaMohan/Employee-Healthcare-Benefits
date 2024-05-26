@@ -14,10 +14,12 @@ function EmployeeList() {
     const [open, setOpen] = useState(false);
 
     const handleEmployeeDelete = (empIndex) => {
-        dispatch({
-            type: 'delete',
-            index: empIndex
-        })
+        if(window.confirm("Are you sure want to delete ?") === true) {
+            dispatch({
+                type: 'delete',
+                index: empIndex
+            })
+        }
     }
 
     const handleEmployee = (currentEmp) => {

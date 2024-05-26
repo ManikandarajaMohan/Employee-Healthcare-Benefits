@@ -1,11 +1,11 @@
 export const getEmployees = () => {
     const data = localStorage.getItem('employees');
     return data ? JSON.parse(data) : [
-        { name: "Test", id: 123, dependents: [{ name: "dependent1", relation: "spouse" }] },
+        { name: "Martin James", id: 123, dependents: [{ name: "Alice", relation: "spouse" }] },
         {
-            name: "Test1", id: 1233, dependents: [
-                { name: "dependent1", relation: "children" },
-                { name: "Adependent2", relation: "spouse" },
+            name: "David Hecht", id: 1234, dependents: [
+                { name: "Freya", relation: "spouse" },
+                { name: "Dimitri", relation: "children" },
             ]
         }
     ];
